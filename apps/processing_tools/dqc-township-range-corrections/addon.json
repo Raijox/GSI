@@ -1,0 +1,12 @@
+{
+  "id": "dqc_township_range_corrections",
+  "title": "Township/Range Corrections",
+  "description": "Review township and range quality issues in a dedicated correction queue.",
+  "type": "data_quality_corrections",
+  "module_key": "processing_tools",
+  "category": "Processing",
+  "nav_group": "processing_tools",
+  "nav_group_label": "Processing Tools",
+  "dqc_table": "township_range",
+  "sql_apply": "db/modules/data_quality_corrections/queries/bootstrap"
+}

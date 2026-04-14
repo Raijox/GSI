@@ -1,0 +1,10 @@
+{
+  "id": "update_duplicate_pages",
+  "title": "Update Duplicate Pages",
+  "description": "Find duplicate page values within each individual book in the active scope and rename later collisions on image pages plus instrument beginning and ending pages with the next available suffix.",
+  "type": "update_duplicate_pages",
+  "module_key": "processing_tools",
+  "category": "Processing",
+  "nav_group": "processing_tools",
+  "nav_group_label": "Processing Tools"
+}

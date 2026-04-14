@@ -1,0 +1,12 @@
+{
+  "id": "dqc_addition_corrections",
+  "title": "Addition Corrections",
+  "description": "Review addition-related quality issues in a dedicated correction queue.",
+  "type": "data_quality_corrections",
+  "module_key": "processing_tools",
+  "category": "Processing",
+  "nav_group": "processing_tools",
+  "nav_group_label": "Processing Tools",
+  "dqc_table": "additions",
+  "sql_apply": "db/modules/data_quality_corrections/queries/bootstrap"
+}

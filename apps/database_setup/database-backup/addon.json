@@ -1,0 +1,10 @@
+{
+  "id": "database_backup",
+  "title": "Database Backup",
+  "description": "Create versioned database backups into the selected folder under your scoped jobs directory.",
+  "type": "database_backup",
+  "module_key": "setup_tools",
+  "category": "Infrastructure",
+  "nav_group": "database_setup",
+  "nav_group_label": "Database Setup"
+}

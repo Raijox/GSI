@@ -1,0 +1,11 @@
+{
+  "id": "keli_output",
+  "title": "Keli Output",
+  "description": "Build tokellpro output tables for the active county scope and export them to CSV files.",
+  "type": "keli_output",
+  "module_key": "setup_tools",
+  "category": "Infrastructure",
+  "nav_group": "output",
+  "nav_group_label": "Output",
+  "sql_apply": "db/modules/keli_output/queries/keli_output.sql"
+}

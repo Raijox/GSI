@@ -1,0 +1,11 @@
+{
+  "id": "link_edata_to_keli",
+  "title": "Link eData to Keli",
+  "description": "Link scoped gdi header/legal rows to Keli IDs and generate deterministic internal IDs when no Keli match exists.",
+  "type": "link_edata_to_keli",
+  "module_key": "setup_tools",
+  "category": "Infrastructure",
+  "nav_group": "keli_linkup",
+  "nav_group_label": "Keli Linkup",
+  "sql_apply": "db/modules/keli_linkup/queries/link_edata_to_keli.sql"
+}

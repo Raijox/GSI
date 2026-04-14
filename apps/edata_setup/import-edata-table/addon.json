@@ -1,0 +1,11 @@
+{
+  "id": "import_edata_table",
+  "title": "Import eData Table",
+  "description": "Import CSV data into GenericDataImport via sp_GenericDataImport.",
+  "type": "import_edata_table",
+  "module_key": "setup_tools",
+  "category": "Infrastructure",
+  "nav_group": "edata_setup",
+  "nav_group_label": "eData Setup",
+  "sql_apply": "db/modules/edata_table_import/queries/sp_GenericDataImport"
+}

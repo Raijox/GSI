@@ -1,0 +1,11 @@
+{
+  "id": "import_keli_table",
+  "title": "Import Keli Table",
+  "description": "Bulk import Keli CSV files into KeliDataImport.",
+  "type": "import_keli_table",
+  "module_key": "setup_tools",
+  "category": "Infrastructure",
+  "nav_group": "keli_setup",
+  "nav_group_label": "Keli Setup",
+  "sql_apply": "db/modules/keli_table_import/queries/sp_KeliBulkImport.sql"
+}

@@ -1,0 +1,10 @@
+{
+  "id": "database_rollback",
+  "title": "Database Rollback",
+  "description": "Quickly undo the most recent reversible add-on operations without running a full database restore.",
+  "type": "database_rollback",
+  "module_key": "setup_tools",
+  "category": "Infrastructure",
+  "nav_group": "database_setup",
+  "nav_group_label": "Database Setup"
+}

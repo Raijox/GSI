@@ -1,0 +1,11 @@
+{
+  "id": "corrections_output",
+  "title": "Corrections Output",
+  "description": "Generate SQL update scripts from processing corrections for the active county scope.",
+  "type": "corrections_output",
+  "module_key": "setup_tools",
+  "category": "Infrastructure",
+  "nav_group": "output",
+  "nav_group_label": "Output",
+  "sql_apply": "db/modules/corrections_output/queries/corrections_output.sql"
+}

@@ -1,0 +1,11 @@
+{
+  "id": "keli_data_quality",
+  "title": "Keli Data Quality",
+  "description": "Run Keli output validation checks and review scoped quality issues.",
+  "type": "keli_data_quality",
+  "module_key": "setup_tools",
+  "category": "Infrastructure",
+  "nav_group": "processing_tools",
+  "nav_group_label": "Processing Tools",
+  "sql_apply": "db/modules/keli_data_quality/queries/keli_data_quality.sql"
+}

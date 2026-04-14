@@ -1,0 +1,11 @@
+{
+  "id": "edit_added_additions",
+  "title": "Added Additions",
+  "description": "Rename custom additions already marked as needs added for the active job scope and sync the new name through current rows plus saved additions history.",
+  "type": "edit_added_additions",
+  "module_key": "processing_tools",
+  "category": "Processing",
+  "nav_group": "processing_tools",
+  "nav_group_label": "Processing Tools",
+  "sql_apply": "db/modules/data_quality_corrections/queries/integrated_support/02_additions_history_support.sql"
+}

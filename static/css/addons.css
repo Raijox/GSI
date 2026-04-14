@@ -1,0 +1,751 @@
+.addons-overlay-shell {
+    min-height: 100%;
+    padding: 14px;
+    background: linear-gradient(
+        170deg,
+        color-mix(in oklab, var(--panel-bg) 93%, #04070b),
+        color-mix(in oklab, var(--dock-bg) 93%, #04070b)
+    );
+    color: var(--text-main);
+}
+
+.addons-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 12px;
+    margin-bottom: 12px;
+}
+
+.addons-content {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    gap: 10px;
+    min-height: 0;
+}
+
+.addons-content.nav-collapsed {
+    grid-template-columns: 36px 1fr;
+}
+
+.addons-catalog,
+.addons-workspace {
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    background: color-mix(in oklab, var(--panel-bg) 90%, transparent);
+    padding: 10px;
+    min-height: 0;
+}
+
+.addons-catalog {
+    overflow-y: auto;
+}
+
+.addons-content.nav-collapsed .addons-catalog {
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 4px 2px;
+}
+
+.addons-content.nav-collapsed #addonCatalogToolbar,
+.addons-content.nav-collapsed #addonAppsGroupLabel,
+.addons-content.nav-collapsed #addonAppsCount,
+.addons-content.nav-collapsed #addonAppsList {
+    display: none !important;
+}
+
+.addons-collapsed-app-name {
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    text-orientation: mixed;
+    font-size: 0.8rem;
+    color: var(--text-main);
+    margin-top: 0;
+    width: 100%;
+    flex: 1 1 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    cursor: pointer;
+    user-select: none;
+    letter-spacing: 0.06em;
+    white-space: nowrap;
+    max-height: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.addons-list {
+    display: grid;
+    gap: 8px;
+}
+
+.addons-item-row {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 6px;
+    align-items: center;
+}
+
+.addons-item {
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    background: color-mix(in oklab, var(--surface) 74%, var(--panel-bg) 26%);
+    color: var(--text-main);
+    text-align: left;
+    padding: 10px;
+}
+
+.addons-item-title-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+}
+
+.addons-item-scope-row {
+    margin-top: 6px;
+}
+
+.addons-item-scope-pill {
+    display: inline-flex;
+    align-items: center;
+    border-radius: 999px;
+    padding: 2px 8px;
+    font-size: 0.72rem;
+    line-height: 1;
+    white-space: nowrap;
+    border: 1px solid rgba(58, 126, 255, 0.35);
+    background: rgba(58, 126, 255, 0.12);
+    color: #bcd6ff;
+}
+
+.addons-pending-pill {
+    display: inline-flex;
+    align-items: center;
+    border-radius: 999px;
+    padding: 2px 8px;
+    font-size: 0.72rem;
+    line-height: 1;
+    white-space: nowrap;
+    border: 1px solid transparent;
+}
+
+.addons-pending-pill.has-pending {
+    background: rgba(221, 83, 83, 0.16);
+    border-color: rgba(221, 83, 83, 0.45);
+    color: #ffc5c5;
+}
+
+.addons-pending-pill.is-clear {
+    background: rgba(58, 126, 255, 0.12);
+    border-color: rgba(58, 126, 255, 0.35);
+    color: #bcd6ff;
+}
+
+.addons-item-actions {
+    display: inline-flex;
+    gap: 4px;
+}
+
+.addons-item:hover {
+    background: color-mix(in oklab, var(--accent) 12%, transparent);
+    border-color: color-mix(in oklab, var(--accent) 45%, var(--border-color));
+}
+
+.addons-item.active {
+    background: color-mix(in oklab, var(--accent) 18%, transparent);
+    border-color: color-mix(in oklab, var(--accent) 70%, var(--border-color));
+}
+
+.addons-workspace {
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
+}
+
+.addons-workspace.addons-workspace-lock-scroll {
+    overflow: auto;
+}
+
+#addonAppWorkspace {
+    flex: 1 1 auto;
+    min-height: 0;
+    position: relative;
+}
+
+.addons-meta-card {
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    background: color-mix(in oklab, var(--surface) 76%, var(--panel-bg) 24%);
+    padding: 12px;
+}
+
+.addons-target {
+    border: 1px dashed color-mix(in oklab, var(--accent) 55%, var(--border-color));
+    border-radius: 8px;
+    background: color-mix(in oklab, var(--accent) 10%, transparent);
+    padding: 8px 10px;
+    font-family: "Consolas", "Courier New", monospace;
+    font-size: 0.9rem;
+}
+
+.addons-inline-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    align-items: center;
+}
+
+.addons-inline-actions-end {
+    justify-content: flex-end;
+}
+
+.addons-inline-actions .btn {
+    white-space: nowrap;
+}
+
+.addons-empty-state {
+    display: grid;
+    place-items: center;
+    color: var(--text-muted);
+    min-height: 180px;
+}
+
+.addons-banner {
+    border-radius: 8px;
+    padding: 8px 10px;
+    margin: 0;
+    font-size: 0.92rem;
+    position: absolute;
+    top: 10px;
+    left: 12px;
+    right: 12px;
+    z-index: 40;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.28);
+}
+
+.addons-banner-success {
+    border: 1px solid rgba(41, 177, 93, 0.45);
+    background: rgba(41, 177, 93, 0.13);
+    color: #8fe8b1;
+}
+
+.addons-banner-danger {
+    border: 1px solid rgba(221, 83, 83, 0.45);
+    background: rgba(221, 83, 83, 0.13);
+    color: #ffc5c5;
+}
+
+.addons-logs-wrap {
+    border-top: 1px solid var(--border-color);
+    padding-top: 10px;
+}
+
+.addons-logs-table th {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+}
+
+.addons-logs-table td {
+    vertical-align: top;
+}
+
+.addons-log-badge {
+    display: inline-block;
+    border-radius: 999px;
+    padding: 2px 8px;
+    font-size: 0.76rem;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    border: 1px solid transparent;
+}
+
+.addons-log-badge.info {
+    background: rgba(58, 126, 255, 0.14);
+    border-color: rgba(58, 126, 255, 0.45);
+    color: #bcd6ff;
+}
+
+.addons-log-badge.warn {
+    background: rgba(218, 165, 32, 0.17);
+    border-color: rgba(218, 165, 32, 0.45);
+    color: #f8e2a6;
+}
+
+.addons-log-badge.error {
+    background: rgba(221, 83, 83, 0.16);
+    border-color: rgba(221, 83, 83, 0.45);
+    color: #ffc5c5;
+}
+
+.addons-mii-workspace {
+    flex: 1 1 auto;
+    height: 100%;
+    min-height: 0;
+    overflow: auto;
+}
+
+.addons-mii-shell {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    height: 100%;
+    min-height: 0;
+    overflow: auto;
+    position: relative;
+}
+
+
+.addons-mii-row {
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    background: color-mix(in oklab, var(--surface) 80%, var(--panel-bg) 20%);
+    color: var(--text-main);
+    text-align: left;
+    padding: 8px 10px;
+}
+
+.addons-mii-row.active {
+    border-color: color-mix(in oklab, var(--accent) 70%, var(--border-color));
+    background: color-mix(in oklab, var(--accent) 16%, transparent);
+}
+
+.addons-mii-row.addons-mii-row-match-ready {
+    border-color: color-mix(in oklab, #f2c94c 65%, var(--border-color));
+    box-shadow: 0 0 0 1px color-mix(in oklab, #f2c94c 35%, transparent) inset;
+}
+
+.addons-mii-main-row {
+    flex: 1 1 auto;
+    min-height: 0;
+    height: 100%;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.addons-mii-pane {
+    display: flex;
+    flex-direction: column;
+    min-height: 0;
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+}
+
+.addons-mii-pane-body {
+    flex: 1 1 auto;
+    min-height: 0;
+    overflow: hidden;
+}
+
+.addons-mii-queue-body {
+    overflow-y: scroll;
+    overflow-x: hidden;
+    overscroll-behavior: contain;
+    scrollbar-gutter: stable both-edges;
+}
+
+.addons-mii-preview-body {
+    position: relative;
+    z-index: 1;
+    min-height: 0;
+    max-height: 100%;
+    overflow: hidden;
+}
+
+.addons-mii-actions {
+    position: sticky;
+    bottom: 0;
+    z-index: 10;
+    display: flex;
+    padding-top: 6px;
+    background: var(--panel-bg);
+    border-top: 1px solid var(--border-color);
+}
+
+/* DQ/KDQ: keep action rows in normal flow so they never cover preview bottoms. */
+.addons-dqc-pane .addons-mii-actions,
+.addons-kdq-pane .addons-mii-actions {
+    position: relative;
+    bottom: auto;
+    z-index: 2;
+}
+
+.addons-dqc-footer-bar {
+    flex: 0 0 auto;
+    padding: 8px 10px;
+    border: 1px solid var(--border-color);
+    background: color-mix(in oklab, var(--panel-bg) 92%, var(--surface) 8%);
+}
+
+.addons-dqc-image-footer {
+    position: relative;
+    z-index: 2;
+    flex: 0 0 auto;
+    min-height: 64px;
+    padding: 8px 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 6px;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    background: color-mix(in oklab, var(--panel-bg) 92%, var(--surface) 8%);
+}
+
+.addons-dqc-image-footer-label {
+    font-size: 11px;
+    line-height: 1;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: .04em;
+}
+
+.addons-dqc-image-footer .btn {
+    font-weight: 600;
+}
+
+.addons-dqc-actionbar {
+    position: relative;
+    z-index: 5;
+}
+
+.addons-dqc-edit-overlay {
+    position: sticky;
+    top: 8px;
+    z-index: 25;
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    background: color-mix(in oklab, var(--panel-bg) 92%, #050911);
+    padding: 0;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 8px;
+    max-height: none;
+}
+
+.addons-dqc-edit-overlay-header {
+    position: sticky;
+    top: 0;
+    z-index: 2;
+    padding: 10px;
+    border-bottom: 1px solid var(--border-color);
+    background: color-mix(in oklab, var(--panel-bg) 94%, #050911);
+}
+
+.addons-dqc-edit-overlay-body {
+    flex: 1 1 auto;
+    min-height: 0;
+    overflow: visible;
+    padding: 10px;
+}
+
+.addons-dqc-main-row {
+    position: relative;
+}
+
+.addons-dqc-edit-overlay-wide {
+    width: 100%;
+}
+
+.addons-tool-actionbar {
+    position: relative;
+    z-index: 5;
+}
+
+.addons-tool-main-row {
+    position: relative;
+}
+
+.addons-overlay-host {
+    position: relative;
+}
+
+.addons-tool-edit-overlay {
+    position: absolute;
+    left: 8px;
+    right: 8px;
+    top: 8px;
+    bottom: 8px;
+    z-index: 25;
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    background: color-mix(in oklab, var(--panel-bg) 92%, #050911);
+    padding: 10px;
+    overflow: auto;
+    max-height: none;
+}
+
+/* Data Quality layout mode:
+   - left selector stays pinned with its own scrollbar
+   - top controls/action are sticky
+   - right image stays in a contained full-height viewer */
+#dqcHeaderBar {
+    position: sticky;
+    top: 0;
+    z-index: 14;
+    background: var(--panel-bg);
+}
+
+#dqcControlsRow {
+    position: static;
+}
+
+#dqcQueueCol {
+    align-self: stretch;
+    position: relative;
+}
+
+#dqcQueuePane {
+    position: relative;
+    top: auto;
+    align-self: stretch;
+    z-index: 6;
+    height: 100%;
+    max-height: 100%;
+    overflow: hidden;
+}
+
+#dqcImageMainCol {
+    min-height: 0;
+    overflow: hidden;
+}
+
+#dqcPreviewWrap {
+    height: 100%;
+    max-height: 100%;
+    overflow: hidden;
+}
+
+#dqcPreviewWrap .gsi-image-frame {
+    height: 100% !important;
+    max-height: 100% !important;
+    overflow: hidden !important;
+}
+
+#dqcActionBar {
+    position: sticky;
+    bottom: 0;
+    z-index: 14;
+    background: var(--panel-bg);
+    padding-bottom: 4px;
+}
+
+.addons-workspace.addons-workspace-dqc-static,
+.addons-workspace.addons-workspace-dqc-static .addons-mii-workspace,
+.addons-workspace.addons-workspace-dqc-static .addons-dqc-shell {
+    overflow: hidden !important;
+}
+
+.addons-dqc-edit-overlay.addons-tool-edit-overlay {
+    padding: 0;
+    overflow: hidden;
+}
+
+.addons-mii-actions .btn {
+    font-weight: 600;
+}
+
+.addons-mii-actions .btn-outline-secondary,
+.addons-mii-actions .btn-outline-info,
+.addons-mii-actions .btn-outline-primary,
+.addons-mii-actions .btn-outline-warning,
+.addons-mii-actions .btn-outline-danger {
+    background: color-mix(in oklab, var(--surface) 92%, var(--panel-bg) 8%);
+    color: var(--text-main);
+    border-color: color-mix(in oklab, var(--border-color) 75%, var(--text-main) 25%);
+}
+
+.addons-mii-actions .btn-outline-secondary:hover,
+.addons-mii-actions .btn-outline-info:hover,
+.addons-mii-actions .btn-outline-primary:hover,
+.addons-mii-actions .btn-outline-warning:hover,
+.addons-mii-actions .btn-outline-danger:hover {
+    background: color-mix(in oklab, var(--surface) 78%, var(--accent) 22%);
+    color: var(--text-main);
+}
+
+.addons-mii-main-row > [class*="col-"] {
+    display: flex;
+    min-height: 0;
+}
+
+.addons-mii-list {
+    display: grid;
+    gap: 6px;
+    height: auto;
+    min-height: 0;
+    overflow: visible;
+}
+
+.addons-mii-preview-wrap {
+    box-sizing: border-box;
+    height: 100%;
+    max-height: 100%;
+    min-height: 0;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    overflow: hidden;
+    background: color-mix(in oklab, var(--surface) 74%, var(--panel-bg) 26%);
+    position: relative;
+    z-index: 1;
+    pointer-events: auto;
+}
+
+.addons-mii-preview-wrap .gsi-image-frame {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    max-height: 100%;
+    min-height: 0;
+}
+
+.addons-mii-preview-wrap .gsi-image-toolbar {
+    position: sticky;
+    top: 0;
+    z-index: 12;
+}
+
+.addons-mii-preview-wrap .gsi-image-viewport {
+    flex: 1 1 0%;
+    min-height: 0;
+    max-height: 100%;
+    overflow-y: auto;
+    overflow-x: auto;
+    overscroll-behavior: contain;
+    scrollbar-gutter: stable both-edges;
+}
+
+.addons-itc-search-results {
+    position: absolute;
+    top: calc(100% + 2px);
+    left: 0;
+    right: 0;
+    z-index: 40;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    background: color-mix(in oklab, var(--surface) 78%, var(--panel-bg) 22%);
+    max-height: 220px;
+    overflow: auto;
+    padding: 6px;
+}
+
+.addons-itc-search-wrap {
+    position: relative;
+    z-index: 6;
+}
+
+.addons-itc-search-row {
+    width: 100%;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    background: color-mix(in oklab, var(--surface) 80%, var(--panel-bg) 20%);
+    color: var(--text-main);
+    text-align: left;
+    padding: 7px 8px;
+    margin-bottom: 6px;
+}
+
+.addons-itc-search-row:last-child {
+    margin-bottom: 0;
+}
+
+.addons-itc-search-row:hover {
+    border-color: color-mix(in oklab, var(--accent) 60%, var(--border-color));
+    background: color-mix(in oklab, var(--accent) 14%, transparent);
+}
+
+.addons-itc-selected-meta {
+    position: relative;
+    z-index: 3;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    background: color-mix(in oklab, var(--surface) 80%, var(--panel-bg) 20%);
+    padding: 8px;
+}
+
+.addons-overlay-match-name {
+    color: #fff;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.28);
+}
+
+.addons-edit-added-body {
+    overflow: auto;
+}
+
+.addons-eaa-instrument-list {
+    display: grid;
+    gap: 8px;
+    max-height: 260px;
+    overflow: auto;
+}
+
+.addons-eaa-instrument-row {
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    background: color-mix(in oklab, var(--surface) 82%, var(--panel-bg) 18%);
+    padding: 8px;
+}
+
+.addons-eaa-instrument-row .badge {
+    white-space: nowrap;
+}
+
+/* Preview helper text is informational only; never let it block dropdown clicks. */
+.addons-mii-pane > .small.text-muted.mb-2 {
+    position: relative;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.addons-mii-shell .addons-logs-wrap {
+    position: absolute;
+    inset: 0;
+    z-index: 40;
+    margin-top: 0 !important;
+    padding: 12px;
+    border-top: 0;
+    background: color-mix(in oklab, var(--panel-bg) 88%, #02060a 12%);
+    overflow: auto;
+}
+
+@media (max-width: 991.98px) {
+    .addons-overlay-shell {
+        padding: 10px;
+    }
+
+    .addons-header {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .addons-content {
+        grid-template-columns: 1fr;
+    }
+
+    .addons-mii-shell {
+        overflow: auto;
+    }
+
+    .addons-mii-main-row {
+        flex: 0 0 auto;
+        height: auto;
+        overflow: visible;
+    }
+
+    .addons-mii-pane {
+        min-height: 260px;
+    }
+
+    .addons-mii-preview-wrap {
+        min-height: 220px;
+    }
+}

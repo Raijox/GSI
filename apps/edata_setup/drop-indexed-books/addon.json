@@ -1,0 +1,11 @@
+{
+  "id": "drop_indexed_books",
+  "title": "Drop Indexed Books",
+  "description": "Review imported header counts by book and soft-delete over-indexed books from processing/output scope.",
+  "type": "drop_indexed_books",
+  "module_key": "setup_tools",
+  "category": "Infrastructure",
+  "nav_group": "edata_setup",
+  "nav_group_label": "eData Setup",
+  "sql_apply": "db/modules/edata_table_import/queries/sp_GenericDataImport"
+}

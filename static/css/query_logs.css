@@ -1,0 +1,308 @@
+.query-log-shell {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    background: color-mix(in oklab, var(--panel-bg) 96%, transparent);
+    color: var(--text-main);
+}
+
+.query-log-header {
+    padding: 14px 16px;
+    border-bottom: 1px solid var(--border-color);
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 12px;
+}
+
+.query-log-toolbar {
+    padding: 14px 16px 12px;
+    border-bottom: 1px solid var(--border-color);
+    display: grid;
+    gap: 12px;
+}
+
+.query-log-filters {
+    display: grid;
+    grid-template-columns: minmax(120px, 150px) minmax(220px, 1fr) repeat(4, minmax(120px, 160px));
+    gap: 10px;
+    align-items: end;
+}
+
+.query-log-field,
+.query-log-search,
+.query-log-date {
+    min-width: 0;
+}
+
+.query-log-toolbar-actions {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.query-log-content {
+    min-height: 0;
+    display: grid;
+    grid-template-columns: minmax(440px, 1.25fr) minmax(320px, 1fr);
+    flex: 1 1 auto;
+}
+
+.query-log-list {
+    min-width: 0;
+    min-height: 0;
+    border-right: 1px solid var(--border-color);
+    overflow: hidden;
+}
+
+.query-log-detail {
+    min-width: 0;
+    min-height: 0;
+    overflow: auto;
+    padding: 14px 16px 18px;
+    background: color-mix(in oklab, var(--panel-bg) 92%, #060b12);
+}
+
+.query-log-table {
+    --bs-table-bg: transparent;
+    --bs-table-color: var(--text-main);
+    --bs-table-hover-bg: color-mix(in oklab, var(--accent-soft) 82%, transparent);
+    font-size: 0.84rem;
+}
+
+.query-log-table thead th {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    background: color-mix(in oklab, var(--panel-bg) 98%, transparent);
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    font-size: 0.69rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.query-log-row {
+    cursor: pointer;
+}
+
+.query-log-row.is-active > td {
+    background: color-mix(in oklab, var(--accent-soft) 84%, transparent);
+}
+
+.query-log-preview {
+    max-width: 420px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: var(--text-main);
+}
+
+.query-log-source {
+    display: grid;
+    gap: 2px;
+}
+
+.query-log-source-main {
+    font-weight: 600;
+}
+
+.query-log-source-sub {
+    color: var(--text-muted);
+    font-size: 0.74rem;
+}
+
+.query-log-status-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    border-radius: 999px;
+    padding: 3px 8px;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.03em;
+}
+
+.query-log-status-badge.is-success {
+    background: color-mix(in oklab, #198754 26%, transparent);
+    color: #8de5b0;
+}
+
+.query-log-status-badge.is-failed {
+    background: color-mix(in oklab, #dc3545 24%, transparent);
+    color: #ffb0b8;
+}
+
+.query-log-status-badge.is-warning {
+    background: color-mix(in oklab, #ffc107 24%, transparent);
+    color: #ffe08a;
+}
+
+.query-log-detail-empty {
+    height: 100%;
+    display: grid;
+    place-items: center;
+    text-align: center;
+    color: var(--text-muted);
+    border: 1px dashed var(--border-color);
+    border-radius: 12px;
+    padding: 20px;
+    background: color-mix(in oklab, var(--panel-bg) 88%, transparent);
+}
+
+.query-log-detail-meta {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+    gap: 10px;
+    margin-bottom: 14px;
+}
+
+.query-log-meta-card {
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    padding: 10px 12px;
+    background: color-mix(in oklab, var(--panel-bg) 96%, transparent);
+}
+
+.query-log-meta-label {
+    font-size: 0.68rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--text-muted);
+    margin-bottom: 4px;
+}
+
+.query-log-meta-value {
+    font-size: 0.83rem;
+    line-height: 1.4;
+    overflow-wrap: anywhere;
+}
+
+.query-log-detail-section {
+    margin-top: 14px;
+}
+
+.query-log-detail-section:first-child {
+    margin-top: 0;
+}
+
+.query-log-detail-title {
+    margin: 0 0 8px;
+    font-size: 0.84rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+}
+
+.query-log-code {
+    margin: 0;
+    padding: 12px;
+    border-radius: 10px;
+    border: 1px solid var(--border-color);
+    background: color-mix(in oklab, var(--panel-bg) 90%, #05070a);
+    color: var(--text-main);
+    white-space: pre-wrap;
+    overflow-wrap: anywhere;
+    word-break: break-word;
+    max-height: 270px;
+    overflow: auto;
+    font-size: 0.8rem;
+    line-height: 1.45;
+}
+
+.query-log-muted {
+    color: var(--text-muted);
+}
+
+.audit-log-popup {
+    padding: 16px;
+}
+
+.audit-log-header-row {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 12px;
+    margin-bottom: 14px;
+}
+
+.audit-log-note {
+    margin: 0;
+    padding: 12px;
+    border-radius: 10px;
+    border: 1px solid var(--border-color);
+    background: color-mix(in oklab, var(--panel-bg) 94%, transparent);
+    color: var(--text-main);
+    white-space: pre-wrap;
+    overflow-wrap: anywhere;
+}
+
+.audit-log-query-stack {
+    display: grid;
+    gap: 14px;
+}
+
+.audit-log-query-card {
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 14px;
+    background: color-mix(in oklab, var(--panel-bg) 94%, transparent);
+}
+
+@media (max-width: 1399.98px) {
+    .query-log-filters {
+        grid-template-columns: repeat(3, minmax(150px, 1fr));
+    }
+}
+
+@media (max-width: 1199.98px) {
+    .query-log-content {
+        grid-template-columns: 1fr;
+    }
+
+    .query-log-list {
+        border-right: 0;
+        border-bottom: 1px solid var(--border-color);
+        max-height: 44%;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .query-log-header {
+        padding: 12px;
+        flex-direction: column;
+    }
+
+    .query-log-toolbar {
+        padding: 12px;
+    }
+
+    .query-log-filters {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .query-log-search {
+        grid-column: 1 / -1;
+    }
+
+    .query-log-detail {
+        padding: 12px;
+    }
+
+    .audit-log-popup {
+        padding: 12px;
+    }
+
+    .audit-log-header-row {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .query-log-filters {
+        grid-template-columns: 1fr;
+    }
+}

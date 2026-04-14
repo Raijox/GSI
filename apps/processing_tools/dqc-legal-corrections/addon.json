@@ -1,0 +1,12 @@
+{
+  "id": "dqc_legal_corrections",
+  "title": "Legal Corrections",
+  "description": "Review legal-description quality issues in a dedicated correction queue.",
+  "type": "data_quality_corrections",
+  "module_key": "processing_tools",
+  "category": "Processing",
+  "nav_group": "processing_tools",
+  "nav_group_label": "Processing Tools",
+  "dqc_table": "legal",
+  "sql_apply": "db/modules/data_quality_corrections/queries/bootstrap"
+}

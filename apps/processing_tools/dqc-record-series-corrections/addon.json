@@ -1,0 +1,12 @@
+{
+  "id": "dqc_record_series_corrections",
+  "title": "Record Series Corrections",
+  "description": "Review record-series quality issues in a dedicated correction queue.",
+  "type": "data_quality_corrections",
+  "module_key": "processing_tools",
+  "category": "Processing",
+  "nav_group": "processing_tools",
+  "nav_group_label": "Processing Tools",
+  "dqc_table": "record_series",
+  "sql_apply": "db/modules/data_quality_corrections/queries/bootstrap"
+}

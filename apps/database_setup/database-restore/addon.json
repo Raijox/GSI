@@ -1,0 +1,10 @@
+{
+  "id": "database_restore",
+  "title": "Database Restore",
+  "description": "Restore the active database from a managed backup file in your scoped jobs directory, then refresh the app.",
+  "type": "database_restore",
+  "module_key": "setup_tools",
+  "category": "Infrastructure",
+  "nav_group": "database_setup",
+  "nav_group_label": "Database Setup"
+}

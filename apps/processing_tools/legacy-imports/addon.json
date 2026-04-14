@@ -1,0 +1,10 @@
+{
+  "id": "legacy_imports",
+  "title": "Legacy Imports",
+  "description": "Import legacy original/new mapping CSVs and apply them to source + corrections tables for the active county scope.",
+  "type": "legacy_imports",
+  "module_key": "processing_tools",
+  "category": "App Add-ons",
+  "nav_group": "extra_tools",
+  "nav_group_label": "App Add-ons"
+}
